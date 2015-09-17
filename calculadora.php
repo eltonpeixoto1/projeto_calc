@@ -9,6 +9,7 @@
 Primeiro numero: <input name "num1" type="text"><br>
 Segundo numero: <input name "num2" type="text"><br>
 <input type = "subimit" name = "operacao"value "+">
+<input type = "subimit" name = "operacao" value "-">
 	<?php
 	$a = $_POST ['num1'];
         $b = $_POST ['num2'];
@@ -17,11 +18,15 @@ Segundo numero: <input name "num2" type="text"><br>
 	if(!empty($op)){
          if($op == '+');
  		$c = &a + $b;
-		else if(
+
+      else if($op == '-');
+              $c = $a + $b;
+
+		else (
 			echo "Opcao invalida"
 			)
 		} 
-echo "Rsultado da soma: $c "
+echo "Rsultado: $c "
 }
 
 ?>
